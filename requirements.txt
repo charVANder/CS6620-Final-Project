@@ -1,0 +1,6 @@
+# tbd
+Flask
+awsgi
+boto3
+requests
+pytest
