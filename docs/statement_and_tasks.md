@@ -102,7 +102,7 @@ Healthcare providers often need a fast and reliable, yet easily comprehensible d
     * As the owner of this project, I would want proper security measures before production 
     * Tasks/sub-issues:
         * Look into and consider security measures such as validation for form inputs, securing API keys, adding CSRF protection for flask forms, configuring CloudFront security headers and caching policies, fixing up Lambda IAM permissions, backup strategies, etc.
-11.	Documentation and Architecture
+11.	Documentation and Architecture (MVP)
     * As the reviewer, I would need good documentation and architecture to understand and evaluate the product.
     * Tasks/sub-issues might include:
         * Finish the README and have the architecture diagrams ready along with all the tradeoffs/explanations

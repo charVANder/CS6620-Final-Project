@@ -1,1 +1,29 @@
-# this will hold the drug input form
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drug Interaction Checker</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Drug Interaction Checker</h1>
+      <form method="POST" action="/check">
+        <div class="form-group">
+          <label for="drugs">Enter drug names (one per line):</label><br />
+          <textarea
+            name="drugs"
+            id="drugs"
+            rows="10"
+            placeholder="lamotrigine
+phenobarbital
+metformin
+etc..."
+          ></textarea>
+        </div>
+        <br />
+        <button type="submit">Check Interactions</button>
+      </form>
+    </div>
+  </body>
+</html>

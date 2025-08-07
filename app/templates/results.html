@@ -1,1 +1,34 @@
-# this will hold the results page
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interaction Results</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Drug Interaction Results</h1>
+
+      <div class="drugs-checked">
+        <h3>Drugs Checked: {{ drugs|join(', ') }}</h3>
+      </div>
+
+      <!-- <div class="interactions">
+        {% for interaction in interactions %}
+        <div
+          class="interaction {% if interaction.interaction_found %}severity-{{ interaction.severity|lower }}{% else %}no-interaction{% endif %}"
+        >
+          <h4>{{ interaction.drug1 }} + {{ interaction.drug2 }}</h4>
+
+          {% if interaction.interaction_found %}
+          <div class="description">
+            Severity: {{ interaction.severity|title }}
+          </div>
+          <div class="severity">{{ interaction.description }}</div>
+        </div>
+      </div> -->
+
+      <a href="/" class="back-link">Check More Drugs</a>
+    </div>
+  </body>
+</html>

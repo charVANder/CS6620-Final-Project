@@ -1,4 +1,3 @@
-# tbd
 Flask
 awsgi
 boto3
