@@ -5,7 +5,7 @@
     "partner_drug_id": "DB01202",
     "partner_drug_name": "Levetiracetam",
     "description": "The risk or severity of CNS depression can be increased when Lorazepam is combined with Levetiracetam.",
-    "severity": "TBD"
+    "severity": "moderate"
   },
   {
     "drug_id": "DB00186",
@@ -13,7 +13,7 @@
     "partner_drug_id": "DB00776",
     "partner_drug_name": "Oxcarbazepine",
     "description": "The risk or severity of CNS depression can be increased when Lorazepam is combined with Oxcarbazepine.",
-    "severity": "TBD"
+    "severity": "moderate"
   },
   {
     "drug_id": "DB00186",
@@ -21,7 +21,7 @@
     "partner_drug_id": "DB00555",
     "partner_drug_name": "Lamotrigine",
     "description": "The risk or severity of CNS depression can be increased when Lorazepam is combined with Lamotrigine.",
-    "severity": "TBD"
+    "severity": "moderate"
   },
   {
     "drug_id": "DB00186",
@@ -29,7 +29,7 @@
     "partner_drug_id": "DB00331",
     "partner_drug_name": "Metformin",
     "description": "Lorazepam may decrease the excretion rate of Metformin which could result in a higher serum level.",
-    "severity": "TBD"
+    "severity": "minor"
   },
   {
     "drug_id": "DB00186",
@@ -37,7 +37,7 @@
     "partner_drug_id": "DB00682",
     "partner_drug_name": "Warfarin",
     "description": "Lorazepam may decrease the excretion rate of Warfarin which could result in a higher serum level.",
-    "severity": "TBD"
+    "severity": "moderate"
   },
   {
     "drug_id": "DB00186",
@@ -45,7 +45,7 @@
     "partner_drug_id": "DB01174",
     "partner_drug_name": "Phenobarbital",
     "description": "The risk or severity of CNS depression can be increased when Lorazepam is combined with Phenobarbital.",
-    "severity": "TBD"
+    "severity": "moderate"
   },
   {
     "drug_id": "DB00331",
@@ -53,7 +53,7 @@
     "partner_drug_id": "DB00555",
     "partner_drug_name": "Lamotrigine",
     "description": "The serum concentration of Metformin can be increased when it is combined with Lamotrigine.",
-    "severity": "TBD"
+    "severity": "minor"
   },
   {
     "drug_id": "DB00331",
@@ -61,7 +61,7 @@
     "partner_drug_id": "DB00682",
     "partner_drug_name": "Warfarin",
     "description": "Metformin may decrease the excretion rate of Warfarin which could result in a higher serum level.",
-    "severity": "TBD"
+    "severity": "moderate"
   },
   {
     "drug_id": "DB00331",
@@ -69,7 +69,7 @@
     "partner_drug_id": "DB00641",
     "partner_drug_name": "Simvastatin",
     "description": "Metformin may increase the hypolipidaemic activities of Simvastatin.",
-    "severity": "TBD"
+    "severity": "minor"
   },
   {
     "drug_id": "DB00338",
@@ -77,7 +77,7 @@
     "partner_drug_id": "DB00776",
     "partner_drug_name": "Oxcarbazepine",
     "description": "The metabolism of Omeprazole can be decreased when combined with Oxcarbazepine.",
-    "severity": "TBD"
+    "severity": "moderate"
   },
   {
     "drug_id": "DB00338",
@@ -85,7 +85,7 @@
     "partner_drug_id": "DB01174",
     "partner_drug_name": "Phenobarbital",
     "description": "The metabolism of Phenobarbital can be decreased when combined with Omeprazole.",
-    "severity": "TBD"
+    "severity": "major"
   },
   {
     "drug_id": "DB00555",
@@ -93,7 +93,7 @@
     "partner_drug_id": "DB01174",
     "partner_drug_name": "Phenobarbital",
     "description": "Phenobarbital may increase the excretion rate of Lamotrigine which could result in a lower serum level and potentially a reduction in efficacy.",
-    "severity": "TBD"
+    "severity": "moderate"
   },
   {
     "drug_id": "DB00555",
@@ -101,7 +101,7 @@
     "partner_drug_id": "DB00641",
     "partner_drug_name": "Simvastatin",
     "description": "The metabolism of Simvastatin can be increased when combined with Lamotrigine.",
-    "severity": "TBD"
+    "severity": "moderate"
   },
   {
     "drug_id": "DB00555",
@@ -109,7 +109,7 @@
     "partner_drug_id": "DB00776",
     "partner_drug_name": "Oxcarbazepine",
     "description": "The risk or severity of CNS depression can be increased when Lamotrigine is combined with Oxcarbazepine.",
-    "severity": "TBD"
+    "severity": "moderate"
   },
   {
     "drug_id": "DB00555",
@@ -117,7 +117,7 @@
     "partner_drug_id": "DB01202",
     "partner_drug_name": "Levetiracetam",
     "description": "The risk or severity of CNS depression can be increased when Lamotrigine is combined with Levetiracetam.",
-    "severity": "TBD"
+    "severity": "moderate"
   },
   {
     "drug_id": "DB00555",
@@ -125,7 +125,7 @@
     "partner_drug_id": "DB00682",
     "partner_drug_name": "Warfarin",
     "description": "Lamotrigine may decrease the excretion rate of Warfarin which could result in a higher serum level.",
-    "severity": "TBD"
+    "severity": "moderate"
   },
   {
     "drug_id": "DB00641",
@@ -133,7 +133,7 @@
     "partner_drug_id": "DB00776",
     "partner_drug_name": "Oxcarbazepine",
     "description": "The metabolism of Simvastatin can be increased when combined with Oxcarbazepine.",
-    "severity": "TBD"
+    "severity": "moderate"
   },
   {
     "drug_id": "DB00641",
@@ -141,7 +141,7 @@
     "partner_drug_id": "DB01174",
     "partner_drug_name": "Phenobarbital",
     "description": "The metabolism of Phenobarbital can be decreased when combined with Simvastatin.",
-    "severity": "TBD"
+    "severity": "major"
   },
   {
     "drug_id": "DB00641",
@@ -149,7 +149,7 @@
     "partner_drug_id": "DB00682",
     "partner_drug_name": "Warfarin",
     "description": "Simvastatin may increase the anticoagulant activities of Warfarin.",
-    "severity": "TBD"
+    "severity": "moderate"
   },
   {
     "drug_id": "DB00682",
@@ -157,7 +157,7 @@
     "partner_drug_id": "DB00776",
     "partner_drug_name": "Oxcarbazepine",
     "description": "The metabolism of Warfarin can be increased when combined with Oxcarbazepine.",
-    "severity": "TBD"
+    "severity": "moderate"
   },
   {
     "drug_id": "DB00682",
@@ -165,7 +165,7 @@
     "partner_drug_id": "DB01174",
     "partner_drug_name": "Phenobarbital",
     "description": "The metabolism of Warfarin can be increased when combined with Phenobarbital.",
-    "severity": "TBD"
+    "severity": "moderate"
   },
   {
     "drug_id": "DB00776",
@@ -173,7 +173,7 @@
     "partner_drug_id": "DB01202",
     "partner_drug_name": "Levetiracetam",
     "description": "The risk or severity of CNS depression can be increased when Oxcarbazepine is combined with Levetiracetam.",
-    "severity": "TBD"
+    "severity": "moderate"
   },
   {
     "drug_id": "DB00776",
@@ -181,7 +181,7 @@
     "partner_drug_id": "DB01174",
     "partner_drug_name": "Phenobarbital",
     "description": "The serum concentration of Phenobarbital can be increased when it is combined with Oxcarbazepine.",
-    "severity": "TBD"
+    "severity": "moderate"
   },
   {
     "drug_id": "DB01174",
@@ -189,6 +189,6 @@
     "partner_drug_id": "DB01202",
     "partner_drug_name": "Levetiracetam",
     "description": "The risk or severity of CNS depression can be increased when Phenobarbital is combined with Levetiracetam.",
-    "severity": "TBD"
+    "severity": "moderate"
   }
 ]
