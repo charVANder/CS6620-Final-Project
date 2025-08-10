@@ -1,6 +1,6 @@
 # Project Architecture
 ## Cloud Architecture Diagram and Overview
-This project implements a serverless architecture using AWS services emulated locally with LocalStack. There is the static web interface layer, then there is the application layer consisting of a Flask Lambda function, and finally, there is the data layer which includes a DynamoDB cache plus external API. An image of the initial cloud archticture diagram is shown below (changes were later made to use a mock DrugBank API due to pricing):
+This project implements a serverless architecture using AWS services emulated locally with LocalStack. There is the static web interface layer, then there is the application layer consisting of a Flask Lambda function, and finally, there is the data layer which includes a DynamoDB cache plus external API. An image of the initial cloud architecture diagram is shown below (changes were later made to use a mock DrugBank API due to pricing):
 
 <p float="left", align="center">
   <img src="../figs/cloud_architecture_diagram.png" width="550"/>
