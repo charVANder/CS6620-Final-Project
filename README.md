@@ -1,5 +1,5 @@
 # CS6620-Final-Project
-A cloud-based proof of concept and minimum viable product for a drug interaction checker built with LocalStack AWS, Terraform, and a mock DrugBank API. Project assignment for CS6620 (Cloud Computing) at the Roux Institute at Northeastern.
+A cloud-based proof of concept and minimum viable product for a drug interaction checker built with LocalStack AWS, Terraform, and a mock DrugBank API. Includes test-driven development and Docker container orchestration. Project assignment for CS6620 (Cloud Computing) at the Roux Institute at Northeastern.
 
 ## *For TA: Assignment Tasks*
 0. Project proposal
@@ -56,6 +56,12 @@ oxcarbazepine
 levetiracetam
 ```
 NOTE: This will take a little bit longer to reach the results page as program must cross-reference between all possible drug-pair interactions.
+
+## Other Tests
+A GitHub Actions workflow runs test scripts automatically whenever code is pushed, a pull request is opened, or the workflow is triggered manually. Test workflow can be triggered manually by going to the Actions tab and clicking on the Run Workflow button under the Drug Interaction Checker workflow. You can view the configuration in .github/workflows/main.yml. Shown below is an image of a few workflow runs (on push and upon manual triggering) as proof that the workflow is running correctly:
+<p float="left", align="center">
+  <img src="figs/workflows.png" width="550"/>
+</p>
 
 ## References and AI Appendix
 * DrugBank data and data schema
