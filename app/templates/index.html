@@ -8,6 +8,14 @@
   <body>
     <div class="container">
       <h1>Drug Interaction Checker</h1>
+      {% if error %}
+      <div
+        class="error"
+        style="color: red; margin: 10px 0; padding: 10px; border: 1px solid red"
+      >
+        {{ error }}
+      </div>
+      {% endif %}
       <form method="POST" action="check">
         <div class="form-group">
           <label for="drugs">Enter drug names (one per line):</label><br />

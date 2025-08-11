@@ -36,9 +36,9 @@ Healthcare providers often need a fast and reliable, yet easily comprehensible d
     * Tasks/sub-issues:
         * Research DrugBank API. NOTE: I applied for the research API and was unsuccessful.
         * Set up separate Python Flask (or FastAPI) service to mock DrugBank API.
-        * Turn the provided drug interaction data from DrugBank into API-compatible formal (interactions.csv)
-        * Create /drugbank/api/v1/drugs/search mock endpoint
-        * Create drugbank/api/v1/interactions mock endpoint
+        * Turn the provided drug interaction data from DrugBank into API-compatible formal (drug_data.json)
+        * Create /drugbank/api/drugs/search mock endpoint
+        * Create drugbank/api/check mock endpoint
         * Maybe even add stuff like response delays or errors to make things realistic (or at least be aware of those possibilities)
         * Create a test dataset with common drugs
         * Deploy the mock API service locally separate from the main Lambda

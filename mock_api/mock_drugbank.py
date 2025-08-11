@@ -3,10 +3,13 @@ from flask import Flask, jsonify, request
 import json
 import time
 import random
+import os
+script_dir = os.path.dirname(os.path.abspath(__file__)) # adding this for testing to work
+data_path = os.path.join(script_dir, 'drug_data.json')
 
 app = Flask(__name__)
 
-with open('drug_data.json', 'r') as file:
+with open(data_path, 'r') as file:
     data = json.load(file)
 
 @app.route('/api/drugs/search')
