@@ -17,5 +17,7 @@ A cloud-based proof of concept and minimum viable product for a drug interaction
     * Please see `docs/presentation.pdf` [here]().
 
 ## References
+* DrugBank data and data schema
+    * Knox C, Wilson M, Klinger CM, et al.DrugBank 6.0: the DrugBank Knowledgebase for 2024.Nucleic Acids Res. 2024 Jan 5;52(D1):D1265-D1275. doi: 10.1093/nar/gkad976.
 * Flask-cors issue: https://github.com/corydolphin/flask-cors/issues/252
 * Asking AI about terraform template examples for serverless architecture: https://claude.ai/share/eef1e2fa-5643-4052-bed2-9446ab885fab
