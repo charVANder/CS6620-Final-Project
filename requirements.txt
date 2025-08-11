@@ -1,5 +1,5 @@
 Flask
-awsgi
+serverless-wsgi
 boto3
 requests
 pytest

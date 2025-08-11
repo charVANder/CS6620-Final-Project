@@ -2,11 +2,22 @@ services:
   localstack:
     image: localstack/localstack
     ports:
-      - "4566:4566" # LocalStack Gateway
+      - "4566:4566"
     environment:
-      - SERVICES=s3, dynambodb, lambda, apigateway, cloudwatch
+      - SERVICES=s3,dynamodb,lambda,apigateway,cloudwatch,iam
       - DEBUG=1
       - DATA_DIR=/tmp/localstack/data
     volumes:
-      - "/tmp/localstack:/tmp/localstack"
       - "/var/run/docker.sock:/var/run/docker.sock"
+    networks:
+      - drug-checker-network
+
+  mock-api:
+    build: ./mock_api
+    ports:
+      - "5001:5001"
+    networks:
+      - drug-checker-network
+
+networks:
+  drug-checker-network:

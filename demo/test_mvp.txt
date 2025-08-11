@@ -7,3 +7,5 @@ simvastatin
 omeprazole
 oxcarbazepine
 levetiracetam
+
+## NOTE: Test took about 10s to find all interactions w/o cacheing

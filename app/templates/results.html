@@ -5,30 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Interaction Results</title>
   </head>
-  <body>
-    <div class="container">
-      <h1>Drug Interaction Results</h1>
-
-      <div class="drugs-checked">
-        <h3>Drugs Checked: {{ drugs|join(', ') }}</h3>
-      </div>
-
-      <!-- <div class="interactions">
-        {% for interaction in interactions %}
-        <div
-          class="interaction {% if interaction.interaction_found %}severity-{{ interaction.severity|lower }}{% else %}no-interaction{% endif %}"
-        >
-          <h4>{{ interaction.drug1 }} + {{ interaction.drug2 }}</h4>
-
-          {% if interaction.interaction_found %}
-          <div class="description">
-            Severity: {{ interaction.severity|title }}
-          </div>
-          <div class="severity">{{ interaction.description }}</div>
-        </div>
-      </div> -->
-
-      <a href="/" class="back-link">Check More Drugs</a>
+<body>
+    <h1>Interaction Results</h1>
+    
+    <h3>Drugs Checked: {{ drugs|join(', ') }}</h3>
+    
+    {% for interaction in interactions %}
+    <div style="border: 1px solid #ccc; margin: 10px; padding: 10px;">
+        <h4>{{ interaction.drug1 }} + {{ interaction.drug2 }}</h4>
+        {% if interaction.interaction_found %}
+            <p><strong>Severity:</strong> {{ interaction.severity }}</p>
+            <p>{{ interaction.description }}</p>
+        {% else %}
+            <p>No known interactions found</p>
+        {% endif %}
     </div>
-  </body>
+    {% endfor %}
+    
+    <a href="/">Check More Drugs</a>
+</body>
 </html>

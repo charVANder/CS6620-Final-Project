@@ -8,12 +8,14 @@ A cloud-based proof of concept and minimum viable product for a drug interaction
     * Please see `docs/statement_and_tasks.pdf` [here](https://github.com/charVANder/CS6620-Final-Project/blob/main/docs/statement_and_tasks.pdf).
 2. Present cloud architecture diagram(s), include explanations about alternatives and their tradeoffs.
     * Please see `docs/architecture.pdf` [here](https://github.com/charVANder/CS6620-Final-Project/blob/main/docs/architecture.pdf).
-3. Create the proof of concept
+3. You can see how I my notebook on how I parsed the academic license data via the DrugBank Schema in `docs/parsing_data.html`
+4. Create the proof of concept
     * Can be displayed through MVP using only 2 drugs. Will use the `demo/test_poc.txt` drugs found [here](https://github.com/charVANder/CS6620-Final-Project/blob/main/demo/test_poc.txt).
-4. Create the MVP
+5. Create the MVP
     * Can be displayed by going though list of drugs. Will use the `demo/test_mvp.txt` drugs found [here](https://github.com/charVANder/CS6620-Final-Project/blob/main/demo/test_mvp.txt).
-5. Prepare Presentation
+6. Prepare Presentation
     * Please see `docs/presentation.pdf` [here]().
 
 ## References
+* Flask-cors issue: https://github.com/corydolphin/flask-cors/issues/252
 * tbd
