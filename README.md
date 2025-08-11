@@ -18,4 +18,4 @@ A cloud-based proof of concept and minimum viable product for a drug interaction
 
 ## References
 * Flask-cors issue: https://github.com/corydolphin/flask-cors/issues/252
-* tbd
+* Asking AI about terraform template examples for serverless architecture: https://claude.ai/share/eef1e2fa-5643-4052-bed2-9446ab885fab
