@@ -8,28 +8,28 @@ terraform {
 }
 
 provider "aws" {
-  region                      = "us-east-1"
-  access_key                  = "test"
-  secret_key                  = "test"
-  s3_use_path_style          = true
+  region = "us-east-1"
+  access_key = "test"
+  secret_key = "test"
+  s3_use_path_style = true
   skip_credentials_validation = true
-  skip_metadata_api_check     = true
-  skip_requesting_account_id  = true
+  skip_metadata_api_check = true
+  skip_requesting_account_id = true
 
   endpoints {
     apigateway = "http://localhost:4566"
-    lambda     = "http://localhost:4566"
-    s3         = "http://localhost:4566"
-    dynamodb   = "http://localhost:4566"
-    iam        = "http://localhost:4566"
+    lambda = "http://localhost:4566"
+    s3 = "http://localhost:4566"
+    dynamodb = "http://localhost:4566"
+    iam = "http://localhost:4566"
   }
 }
 
 # DynamoDB cache table
 resource "aws_dynamodb_table" "cache_table" {
-  name           = "drug-interactions-cache"
-  billing_mode   = "PAY_PER_REQUEST"
-  hash_key       = "interaction_key"
+  name = "drug-interactions-cache"
+  billing_mode = "PAY_PER_REQUEST"
+  hash_key = "interaction_key"
 
   attribute {
     name = "interaction_key"
@@ -43,16 +43,16 @@ resource "aws_dynamodb_table" "cache_table" {
 
 # Lambda function
 resource "aws_lambda_function" "drug_checker" {
-  filename         = "app.zip"
-  function_name    = "drug-interaction-checker"
-  role            = aws_iam_role.lambda_role.arn
-  handler         = "app.lambda_handler"
-  runtime         = "python3.9"
-  timeout         = 30
+  filename = "app.zip"
+  function_name = "drug-interaction-checker"
+  role = aws_iam_role.lambda_role.arn
+  handler = "app.lambda_handler"
+  runtime = "python3.9"
+  timeout = 30
 
   environment {
     variables = {
-      MOCK_API_URL = "http://mock-api:5001"
+      MOCK_API_URL = "http://host.docker.internal:5001"
     }
   }
 
@@ -60,7 +60,7 @@ resource "aws_lambda_function" "drug_checker" {
 }
 
 resource "aws_lambda_function_url" "drug_checker_url" {
-  function_name      = aws_lambda_function.drug_checker.function_name
+  function_name = aws_lambda_function.drug_checker.function_name
   authorization_type = "NONE"
 }
 
@@ -117,7 +117,7 @@ resource "aws_iam_policy" "lambda_policy" {
 }
 
 resource "aws_iam_role_policy_attachment" "lambda_policy" {
-  role       = aws_iam_role.lambda_role.name
+  role = aws_iam_role.lambda_role.name
   policy_arn = aws_iam_policy.lambda_policy.arn
 }
 
@@ -127,22 +127,22 @@ resource "aws_api_gateway_rest_api" "drug_checker_api" {
 }
 
 resource "aws_api_gateway_method" "root_method" {
-  rest_api_id   = aws_api_gateway_rest_api.drug_checker_api.id
-  resource_id   = aws_api_gateway_rest_api.drug_checker_api.root_resource_id
-  http_method   = "ANY"
+  rest_api_id = aws_api_gateway_rest_api.drug_checker_api.id
+  resource_id = aws_api_gateway_rest_api.drug_checker_api.root_resource_id
+  http_method = "ANY"
   authorization = "NONE"
 }
 
 resource "aws_api_gateway_resource" "proxy" {
   rest_api_id = aws_api_gateway_rest_api.drug_checker_api.id
-  parent_id   = aws_api_gateway_rest_api.drug_checker_api.root_resource_id
-  path_part   = "{proxy+}"
+  parent_id = aws_api_gateway_rest_api.drug_checker_api.root_resource_id
+  path_part = "{proxy+}"
 }
 
 resource "aws_api_gateway_method" "proxy_method" {
-  rest_api_id   = aws_api_gateway_rest_api.drug_checker_api.id
-  resource_id   = aws_api_gateway_resource.proxy.id
-  http_method   = "ANY"
+  rest_api_id = aws_api_gateway_rest_api.drug_checker_api.id
+  resource_id = aws_api_gateway_resource.proxy.id
+  http_method = "ANY"
   authorization = "NONE"
 }
 
@@ -152,8 +152,8 @@ resource "aws_api_gateway_integration" "proxy_integration" {
   http_method = aws_api_gateway_method.proxy_method.http_method
 
   integration_http_method = "POST"
-  type                   = "AWS_PROXY"
-  uri                    = aws_lambda_function.drug_checker.invoke_arn
+  type = "AWS_PROXY"
+  uri = aws_lambda_function.drug_checker.invoke_arn
 }
 
 resource "aws_api_gateway_integration" "root_integration" {
@@ -162,8 +162,8 @@ resource "aws_api_gateway_integration" "root_integration" {
   http_method = aws_api_gateway_method.root_method.http_method
 
   integration_http_method = "POST"
-  type                   = "AWS_PROXY"
-  uri                    = aws_lambda_function.drug_checker.invoke_arn
+  type = "AWS_PROXY"
+  uri = aws_lambda_function.drug_checker.invoke_arn
 }
 
 resource "aws_api_gateway_deployment" "drug_checker_deploy" {
@@ -175,15 +175,23 @@ resource "aws_api_gateway_deployment" "drug_checker_deploy" {
   stage_name  = "dev"
 }
 
-resource "aws_lambda_permission" "api_gw" {
-  statement_id  = "AllowExecutionFromAPIGateway"
+resource "aws_lambda_permission" "api_gw_root" {
+  statement_id  = "AllowExecutionFromAPIGatewayRoot"
   action        = "lambda:InvokeFunction"
   function_name = aws_lambda_function.drug_checker.function_name
   principal     = "apigateway.amazonaws.com"
-  source_arn    = "${aws_api_gateway_rest_api.drug_checker_api.execution_arn}/*/*"
+  source_arn    = "${aws_api_gateway_rest_api.drug_checker_api.execution_arn}/*/ANY"
+}
+
+resource "aws_lambda_permission" "api_gw_proxy" {
+  statement_id  = "AllowExecutionFromAPIGatewayProxy"
+  action        = "lambda:InvokeFunction"
+  function_name = aws_lambda_function.drug_checker.function_name
+  principal     = "apigateway.amazonaws.com"
+  source_arn    = "${aws_api_gateway_rest_api.drug_checker_api.execution_arn}/*/ANY/*"
 }
 
 # Output the API Gateway URL
 output "api_gateway_url" {
-  value = "http://localhost:4566/restapis/${aws_api_gateway_rest_api.drug_checker_api.id}/dev"
+  value = "http://localhost:4566/restapis/${aws_api_gateway_rest_api.drug_checker_api.id}/dev/_user_request_/"
 }

@@ -10,7 +10,8 @@ import os
 app = Flask(__name__)
 
 #MOCK_API_URL = "http://mock-api:5001"
-MOCK_API_URL = os.environ.get('MOCK_API_URL', 'http://mock-api:5001')
+#MOCK_API_URL = os.environ.get('MOCK_API_URL', 'http://mock-api:5001')
+MOCK_API_URL = os.environ.get('MOCK_API_URL', 'http://host.docker.internal:5001')
 CACHE_TABLE = "drug-interactions-cache"
 
 

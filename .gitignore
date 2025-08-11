@@ -3,3 +3,7 @@ scratch
 .vscode
 .DS_Store
 __pycache__
+
+# ignore all the terraform stuff other than the main.tf
+terraform/*
+!terraform/main.tf
