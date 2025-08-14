@@ -67,16 +67,17 @@ A GitHub Actions workflow runs test scripts automatically whenever code is pushe
 </p>
 
 ## References and AI Appendix
-* DrugBank data and data schema
+* Using DrugBank academic data and data schema
     * Knox C, Wilson M, Klinger CM, et al.DrugBank 6.0: the DrugBank Knowledgebase for 2024.Nucleic Acids Res. 2024 Jan 5;52(D1):D1265-D1275. doi: 10.1093/nar/gkad976.
-* Lambda Function HTTP invoke methods: https://docs.aws.amazon.com/lambda/latest/dg/apig-http-invoke-decision.html
-* Testing AWS infrastructure w/ LocalStack and Terraform: https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/test-aws-infra-localstack-terraform.html
-* Lambda and IAM: https://docs.aws.amazon.com/lambda/latest/dg/security_iam_service-with-iam.html
-*  Lambda Function URLs with LocalStack: https://docs.localstack.cloud/aws/services/lambda/#trigger-the-lambda-function-url
-* Pytest fixtures: https://docs.pytest.org/en/6.2.x/fixture.html
-* Unittest "b": https://stackoverflow.com/questions/25069017/using-unittest-what-is-b-self-asserttruebplease-login
-* Simulating API timeouts with a mock API: https://zuplo.com/learning-center/mock-apis-to-simulate-timeouts
-* Flask-cors issue: https://github.com/corydolphin/flask-cors/issues/252
-* Installing Docker Compose in GitHub Actions: https://claude.ai/share/f735d8d5-aaf6-4504-9967-485bbe40b7a6
-* Fixing my LocalStack/API Gateway integration issue. Terraform/LocalStack configuration was working, API Gateway was created successfully, and direct API calls were successful, but the generated URLs wouldn't work properly in browsers due to unknown CORS or routing issues: https://claude.ai/share/7d0e9590-b892-4945-ac61-f2ca30a9e5fe
-* Asking AI about terraform template examples for serverless architecture: https://claude.ai/share/eef1e2fa-5643-4052-bed2-9446ab885fab
+* Lambda Function HTTP invoke methods - [link](https://docs.aws.amazon.com/lambda/latest/dg/apig-http-invoke-decision.html)
+* Testing AWS infrastructure w/ LocalStack and Terraform - [link](https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/test-aws-infra-localstack-terraform.html)
+* Lambda and IAM - [link](https://docs.aws.amazon.com/lambda/latest/dg/security_iam_service-with-iam.html)
+*  Lambda Function URLs with LocalStack - [link](https://docs.localstack.cloud/aws/services/lambda/#trigger-the-lambda-function-url)
+* Pytest fixtures - [link](https://docs.pytest.org/en/6.2.x/fixture.html)
+* Unittest "b" - [link](https://stackoverflow.com/questions/25069017/using-unittest-what-is-b-self-asserttruebplease-login)
+* Parsing XML files - [link](https://docs.python.org/3/library/xml.etree.elementtree.html)
+* Simulating API timeouts with a mock API - [link](https://zuplo.com/learning-center/mock-apis-to-simulate-timeouts)
+* Flask-cors issue - [link](https://github.com/corydolphin/flask-cors/issues/252)
+* Installing Docker Compose in GitHub Actions - [link](https://claude.ai/share/f735d8d5-aaf6-4504-9967-485bbe40b7a6)
+* Fixing my LocalStack/API Gateway integration issue. Terraform/LocalStack configuration was working, API Gateway was created successfully, and direct API calls were successful, but the generated URLs wouldn't work properly in browsers due to unknown CORS or routing issues - [link](https://claude.ai/share/7d0e9590-b892-4945-ac61-f2ca30a9e5fe)
+* Asking AI about terraform template examples for serverless architecture - [link](https://claude.ai/share/eef1e2fa-5643-4052-bed2-9446ab885fab)
